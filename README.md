@@ -6,36 +6,28 @@ The system builds embeddings locally, stores vector indexes per document, and en
 
 ## 🚀 Features
 
-📄 Upload PDF documents
-
-🔎 Semantic search using FAISS vector database
-
-🧠 Local LLM responses via Ollama (Mistral)
-
-⚡ Batch embeddings using Ollama embedding API
-
-📊 Financial document detection + revenue chart generation
-
-💬 Chat memory per document
-
-📡 Streaming AI responses
-
-🧩 Multi-document comparison support
-
-🟢 Fully local → No data leaves your machine
+- 📄 Upload PDF documents
+- 🔎 Semantic search using FAISS vector database
+- 🧠 Local LLM responses via Ollama (Mistral)
+- ⚡ Batch embeddings using Ollama embedding API
+- 📊 Financial document detection + revenue chart generation
+- 💬 Chat memory per document
+- 📡 Streaming AI responses
+- 🧩 Multi-document comparison support
+- 🟢 Fully local → No data leaves your machine
 
 ## 🧠 Architecture Overview
 
 User Upload PDF
-→ Backend extracts text
-→ Text chunking
-→ Batch embedding via Ollama
-→ FAISS vector index creation
-→ Stored per document
-→ User asks question
-→ Relevant chunks retrieved
-→ Prompt built with context
-→ Ollama generates answer
+- Backend extracts text
+- Text chunking
+- Batch embedding via Ollama
+- FAISS vector index creation
+- Stored per document
+- User asks question
+- Relevant chunks retrieved
+- Prompt built with context
+- Ollama generates answer
 
 ## ⚙️ Tech Stack
 ### Backend
@@ -165,24 +157,24 @@ Handles:
 lexora/
 │
 ├── backend/
-│   ├── main.py                  # FastAPI routes
-│   ├── rag.py                   # Embedding + FAISS retrieval
-│   ├── brain.py                 # LLM prompt + memory
-│   ├── pdf_reader.py            # PDF text extraction
-│   ├── financial_detector.py    # Detects financial documents
-│   ├── financial_extractor.py   # Extracts revenue/profit figures
-│   ├── finance_api.py           # Stock price via yfinance
-│   ├── analytics/
-│   │   └── chart_generator.py   # Revenue trend charts
-│   ├── vectorstore/             # Auto-created, gitignored
-│   ├── chat_memory/             # Auto-created, gitignored
-│   └── requirements.txt
+│ ├── main.py  # FastAPI routes
+│ ├── rag.py # Embedding + FAISS retrieval
+│ ├── brain.py # LLM prompt + memory
+│ ├── pdf_reader.py # PDF text extraction
+│ ├── financial_detector.py # Detects financial documents
+│ ├── financial_extractor.py # Extracts revenue/profit figures
+│ ├── finance_api.py # Stock price via yfinance
+│ ├── analytics/
+│ │ └── chart_generator.py # Revenue trend charts
+│ ├── vectorstore/ # Auto-created, gitignored
+│ ├── chat_memory/ # Auto-created, gitignored
+│ └── requirements.txt
 │
 └── frontend/
-    ├── app/
-    │   └── chat/
-    │       └── page.js          # Main chat UI
-    └── package.json
+├── app/
+│ └── chat/
+│ └── page.js # Main chat UI
+└── package.json
 
 
 
