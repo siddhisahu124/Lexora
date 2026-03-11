@@ -1,10 +1,10 @@
-📄 Lexora — Local RAG Document Chat System
+# 📄 Lexora — Local RAG Document Chat System
 
 Lexora is a fully local AI document assistant that allows users to upload PDFs and chat with them using a Retrieval-Augmented Generation (RAG) pipeline powered by Ollama + FAISS + FastAPI + React.
 
 The system builds embeddings locally, stores vector indexes per document, and enables contextual question answering with streaming responses.
 
-🚀 Features
+## 🚀 Features
 
 📄 Upload PDF documents
 
@@ -24,7 +24,7 @@ The system builds embeddings locally, stores vector indexes per document, and en
 
 🟢 Fully local → No data leaves your machine
 
-🧠 Architecture Overview
+## 🧠 Architecture Overview
 
 User Upload PDF
 → Backend extracts text
@@ -37,7 +37,7 @@ User Upload PDF
 → Prompt built with context
 → Ollama generates answer
 
-⚙️ Tech Stack
+## ⚙️ Tech Stack
 Backend
 
 FastAPI
@@ -60,7 +60,7 @@ Fetch API
 
 Streaming UI
 
-🧩 Key Concepts Used
+## 🧩 Key Concepts Used
 
 Retrieval Augmented Generation (RAG)
 
@@ -76,16 +76,16 @@ Streaming responses
 
 Local AI deployment
 
-🏃 Setup Instructions
-1️⃣ Clone Repository
+## 🏃 Setup Instructions
+### 1️⃣ Clone Repository
 git clone https://github.com/yourname/lexora.git
 cd lexora
-2️⃣ Create Virtual Environment
+### 2️⃣ Create Virtual Environment
 python -m venv venv
 venv\Scripts\activate
-3️⃣ Install Dependencies
+### 3️⃣ Install Dependencies
 pip install -r requirements.txt
-4️⃣ Install Ollama
+### 4️⃣ Install Ollama
 
 Download from:
 
@@ -95,16 +95,16 @@ Pull required models:
 
 ollama pull mistral
 ollama pull nomic-embed-text
-5️⃣ Run Backend
+### 5️⃣ Run Backend
 cd backend
 uvicorn main:app --reload
-6️⃣ Run Frontend
+### 6️⃣ Run Frontend
 cd frontend
 npm install
 npm run dev
-7️⃣ Open Application
+### 7️⃣ Open Application
 http://localhost:3000
-⚡ Performance Optimizations
+## ⚡ Performance Optimizations
 
 Replaced HuggingFace embeddings → Ollama batch embeddings
 
@@ -118,12 +118,12 @@ Limited chunk size for faster indexing
 
 Local FAISS storage per document
 
-🔐 Privacy
+## 🔐 Privacy
 
 All embeddings, vectors, prompts, and documents remain local on the machine.
 No cloud inference unless explicitly integrated.
 
-📈 Future Improvements
+## 📈 Future Improvements
 
 GPU FAISS indexing
 
@@ -197,7 +197,7 @@ Polling document processing status
 
 Sidebar document state
 
-📁 Folder Structure
+## 📁 Folder Structure
 lexora/
 │
 ├── backend/
@@ -222,7 +222,7 @@ lexora/
 
 
 
-📌 Project Description
+## 📌 Project Description
 
 AI Document Chat System (RAG Pipeline)
 
