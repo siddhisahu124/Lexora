@@ -38,43 +38,30 @@ User Upload PDF
 → Ollama generates answer
 
 ## ⚙️ Tech Stack
-Backend
+### Backend
 
-FastAPI
+- FastAPI
+- FAISS
+- Ollama
+- NumPy
+- Rank-BM25
+- PyPDF
 
-FAISS
+### Frontend
 
-Ollama
-
-NumPy
-
-Rank-BM25
-
-PyPDF
-
-Frontend
-
-React / Next.js
-
-Fetch API
-
-Streaming UI
+- React / Next.js
+- Fetch API
+- Streaming UI
 
 ## 🧩 Key Concepts Used
 
-Retrieval Augmented Generation (RAG)
-
-Vector similarity search
-
-Batch embeddings optimization
-
-Prompt engineering
-
-Background task processing
-
-Streaming responses
-
-Local AI deployment
+- Retrieval Augmented Generation (RAG)
+- Vector similarity search
+- Batch embeddings optimization
+- Prompt engineering
+- Background task processing
+- Streaming responses
+- Local AI deployment
 
 ## 🏃 Setup Instructions
 ### 1️⃣ Clone Repository
@@ -104,19 +91,15 @@ npm install
 npm run dev
 ### 7️⃣ Open Application
 http://localhost:3000
+
 ## ⚡ Performance Optimizations
 
-Replaced HuggingFace embeddings → Ollama batch embeddings
-
-Reduced embedding calls from 200 → 1
-
-Added processing status polling API
-
-Implemented streaming LLM responses
-
-Limited chunk size for faster indexing
-
-Local FAISS storage per document
+- Replaced HuggingFace embeddings → Ollama batch embeddings
+- Reduced embedding calls from 200 → 1
+- Added processing status polling API
+- Implemented streaming LLM responses
+- Limited chunk size for faster indexing
+- Local FAISS storage per document
 
 ## 🔐 Privacy
 
@@ -125,17 +108,13 @@ No cloud inference unless explicitly integrated.
 
 ## 📈 Future Improvements
 
-GPU FAISS indexing
+- GPU FAISS indexing
+- Redis cache layer
+- Multi-user authentication
+- Document tagging
+- Hybrid keyword + vector retrieval tuning
 
-Redis cache layer
-
-Multi-user authentication
-
-Document tagging
-
-Hybrid keyword + vector retrieval tuning
-
-👨‍💻 System Architecture Explanation
+## 👨‍💻 System Architecture Explanation
 
 The backend is divided into three main intelligence layers.
 
@@ -143,29 +122,21 @@ The backend is divided into three main intelligence layers.
 
 Handles:
 
-Upload API
-
-Chat API
-
-Document status API
-
-Background task scheduling
+- Upload API
+- Chat API
+- Document status API
+- Background task scheduling
 
 🟣 rag.py — Core Retrieval Pipeline (Most Important File)
 
 Handles:
 
-Document chunking
-
-Embedding generation using Ollama
-
-FAISS index construction
-
-Retrieval of most relevant document chunks
-
-BM25 ranking
-
-Passing contextual information to the LLM
+- Document chunking
+- Embedding generation using Ollama
+- FAISS index construction
+- Retrieval of most relevant document chunks
+- BM25 ranking
+- Passing contextual information to the LLM
 
 👉 This module acts as the retrieval intelligence layer.
 
@@ -173,13 +144,10 @@ Passing contextual information to the LLM
 
 Handles:
 
-Prompt construction
-
-Chat history injection
-
-Streaming response generation
-
-Running Ollama subprocess
+- Prompt construction
+- Chat history injection
+- Streaming response generation
+- Running Ollama subprocess
 
 This module generates the final AI response.
 
@@ -187,15 +155,11 @@ This module generates the final AI response.
 
 Handles:
 
-Upload button
-
-Chat interface
-
-Streaming response display
-
-Polling document processing status
-
-Sidebar document state
+- Upload button
+- Chat interface
+- Streaming response display
+- Polling document processing status
+- Sidebar document state
 
 ## 📁 Folder Structure
 lexora/
@@ -224,10 +188,7 @@ lexora/
 
 ## 📌 Project Description
 
-AI Document Chat System (RAG Pipeline)
-
-Built a fully local Retrieval-Augmented Generation system enabling semantic question answering over uploaded PDFs using FAISS vector search and Ollama-based LLM inference.
-
-Implemented batch embedding optimization reducing indexing time by over 90%, streaming response generation, financial document analytics, and per-document conversational memory.
-
-Designed a scalable FastAPI backend and interactive React frontend supporting real-time document processing status tracking.
+- AI Document Chat System (RAG Pipeline)
+- Built a fully local Retrieval-Augmented Generation system enabling semantic question answering over uploaded PDFs using FAISS vector search and Ollama-based LLM inference.
+- Implemented batch embedding optimization reducing indexing time by over 90%, streaming response generation, financial document analytics, and per-document conversational memory.
+- Designed a scalable FastAPI backend and interactive React frontend supporting real-time document processing status tracking.
