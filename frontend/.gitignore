@@ -1,0 +1,77 @@
+# =========================
+# Frontend (Next.js)
+# =========================
+
+# Node dependencies
+node_modules/
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# Build output
+.next/
+out/
+build/
+
+# Testing
+coverage/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Environment variables
+.env*
+.env.local
+.env.development.local
+.env.production.local
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# OS / Misc
+.DS_Store
+Thumbs.db
+*.pem
+
+
+# =========================
+# Backend (Python / FastAPI)
+# =========================
+
+# Virtual environments
+venv/
+backend/venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs
+*.log
+
+# Runtime / generated data (DO NOT COMMIT)
+vectorstore/
+backend/vectorstore/
+chat_memory/
+backend/chat_memory/
+user_memory.json
+backend/user_memory.json
+
+# Uploaded / temp files
+*.pdf
+
+# Environment files
+.env
